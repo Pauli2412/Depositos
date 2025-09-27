@@ -11,7 +11,7 @@ async function poll() {
     logger.info("🔄 Iniciando polling Telepagos...");
 
     // leer credenciales de ConfTelepagos
-    const cuentas = await sheetsService.readConfPlataformas();
+    const cuentas = await sheetsService.getTelepagosAccounts();
     const now = new Date();
 
     for (const cuenta of cuentas) {
